@@ -33,7 +33,7 @@ bestMotifs p = p {motifs1 = filterMotifs (motifs1 p), motifs2 = filterMotifs (mo
 main :: IO ()
 main = do
 
-    contents <- readFile "C:/Users/yido6/Documents/Uni/Level 6/Final Project/Bacterial Efflux Pumps Bioinformatics Investigations/Proteomes/E.coli K12 Sample Proteome/uniprot-proteome_UP000000625.fasta" --"data.txt"
+    contents <- readFile "./data.txt"
     let proteins = tail $ splitProteins contents
         cleanProteins = map (match parseAndCleanProtein) proteins
         searchedProteins = map (\x -> parseMotifs x type1Parsers type2Parsers) $ catMaybes cleanProteins

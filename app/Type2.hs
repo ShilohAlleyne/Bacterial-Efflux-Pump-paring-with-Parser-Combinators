@@ -36,7 +36,7 @@ xxxssssx =
         (pure <$> anySym)  <*>
         (pure <$> anySym)  <*>
         (pure <$> anySym)  <*>
-        string "SSSS"      <*>
+        ssss               <*>
         (pure <$> anySym))
     <* many anySym
     
